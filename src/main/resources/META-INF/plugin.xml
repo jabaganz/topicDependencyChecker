@@ -3,17 +3,18 @@
     <name>Template</name>
     <vendor>JetBrains</vendor>
 
-    <!-- Product and plugin compatibility requirements -->
-    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService"/>
-        <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService"/>
+        <toolWindow id="topicMigrations" anchor="right" secondary="true" factoryClass="org.jetbrains.plugins.template.MyToolWindowFactory"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="CheckMigrations" text="Check for Migrations" class="org.jetbrains.plugins.template.CheckMigrationsAction">
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control A" second-keystroke="A" remove="true"/>
+        </action>
+    </actions>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.platform</depends>
 </idea-plugin>
