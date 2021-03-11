@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package de.db.kapa
 
 import com.intellij.ui.treeStructure.Tree
 import java.awt.GridLayout

@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package de.db.kapa
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow

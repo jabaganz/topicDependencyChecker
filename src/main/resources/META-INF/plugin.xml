@@ -1,16 +1,16 @@
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>Template</name>
-    <vendor>JetBrains</vendor>
+    <id>de.db.kapa</id>
+    <name>TopicMigrationTools</name>
+    <vendor>Accso</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="topicMigrations" anchor="right" secondary="true" factoryClass="org.jetbrains.plugins.template.MyToolWindowFactory"/>
+        <toolWindow id="topicMigrations" anchor="right" secondary="true" factoryClass="de.db.kapa.MyToolWindowFactory"/>
     </extensions>
 
     <actions>
-        <action id="CheckMigrations" text="Check for Migrations" class="org.jetbrains.plugins.template.CheckMigrationsAction">
+        <action id="CheckMigrations" text="Check for Migrations" class="de.db.kapa.CheckMigrationsAction">
             <keyboard-shortcut keymap="Mac OS X" first-keystroke="control A" second-keystroke="A" remove="true"/>
         </action>
     </actions>
